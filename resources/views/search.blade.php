@@ -13,6 +13,11 @@
                         <x-input action="/search" id="search" name="search" type="search" placeholder="Search..." class="block w-full" />
                         <x-button>Search</x-button>
                     </form>
+
+                    @if ($results)
+                        Results reached view.
+                    @endif
+
                 </div>
             </div>
         </div>

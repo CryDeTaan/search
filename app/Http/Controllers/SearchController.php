@@ -14,6 +14,14 @@ class SearchController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('search');
+        $results = null;
+
+        if ($request->search) {
+            $results = collect();
+        }
+
+        return view('search', [
+            'results' => $results,
+        ]);
     }
 }
