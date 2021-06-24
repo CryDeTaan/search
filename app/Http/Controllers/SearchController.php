@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class SearchController extends Controller
@@ -16,8 +17,8 @@ class SearchController extends Controller
     {
         $results = null;
 
-        if ($request->search) {
-            $results = collect();
+        if ($search = $request->search) {
+            $results = Article::search($search)->get();
         }
 
         return view('search', [
