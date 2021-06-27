@@ -26,6 +26,7 @@
                                             {{ $result->title }} #{{ $result->id }}
                                         </h1>
                                         <p>{{ $result->teaser }}</p>
+                                        <p>{{ $result->user->name }}</p>
                                     </div>
                                 @endforeach
 

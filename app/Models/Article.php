@@ -10,4 +10,12 @@ class Article extends Model
 {
     use HasFactory;
     use Searchable;
+
+    /**
+     * Get the user who owns the article.
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
