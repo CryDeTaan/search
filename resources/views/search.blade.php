@@ -19,6 +19,7 @@
                     @if ($results)
                         <div class="space-y-4">
                             @if($results->count())
+                                <em>Found {{ $results->total() }}</em>
                                 @foreach($results as $result)
                                     <div>
                                         <h1 class="text-lg font-semibold">
