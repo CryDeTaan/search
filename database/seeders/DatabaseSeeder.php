@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::factory(5)
-            ->hasArticles(10)
+            ->hasArticles(100)
             ->create();
     }
 }
