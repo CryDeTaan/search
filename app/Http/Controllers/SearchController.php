@@ -18,7 +18,8 @@ class SearchController extends Controller
         $results = null;
 
         if ($search = $request->search) {
-            $results = Article::search($search)->get();
+            $results = Article::search($search)->paginate(5);
+            $results->appends('query', null);
         }
 
         return view('search', [

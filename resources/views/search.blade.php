@@ -27,6 +27,9 @@
                                         <p>{{ $result->teaser }}</p>
                                     </div>
                                 @endforeach
+
+                                {{ $results->withQueryString()->links() }}
+
                             @else
                                 <p>No results found</p>
                             @endif
