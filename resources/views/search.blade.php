@@ -22,7 +22,7 @@
                                 @foreach($results as $result)
                                     <div>
                                         <h1 class="text-lg font-semibold">
-                                            {{ $result->title }}
+                                            {{ $result->title }} #{{ $result->id }}
                                         </h1>
                                         <p>{{ $result->teaser }}</p>
                                     </div>
