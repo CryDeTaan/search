@@ -10,7 +10,9 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <form action="/search" method="get" class="space-y-2 mb-6">
-                        <x-input id="search" name="search" type="search" placeholder="Search..." class="block w-full" />
+                        <x-input id="search" name="search" type="search" placeholder="Search..." class="block w-full"
+                                 value="{{ request()->search }}"
+                        />
                         <x-button>Search</x-button>
                     </form>
 
